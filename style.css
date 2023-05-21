@@ -1,0 +1,153 @@
+:root {
+  --primary-orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+  --font-light: 400;
+  --font-heavy: 700;
+  --font-family: "Overpass";
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: var(--font-light);
+  color: var(--medium-grey);
+  font-family: var(--font-family);
+}
+
+h2 {
+  font-weight: var(--font-heavy);
+  font-size: 1.215rem;
+  color: var(--white);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Form state */
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--very-dark-blue);
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  max-width: 90%;
+  background: var(--dark-blue);
+  margin: 1.5rem;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1.5rem;
+  border-radius: 1.5rem;
+}
+
+.image-container {
+  background-color: var(--light-grey);
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+input.rating_input {
+  display: none;
+}
+
+.checks {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.715rem;
+  margin-bottom: 0.715rem;
+}
+
+.rating_label {
+  background: var(--very-dark-blue);
+  width: 2.715rem;
+  height: 2.715rem;
+  border-radius: 50%;
+  align-items: center;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+button {
+  background-color: var(--primary-orange);
+  border: none;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+/* Thank you state */
+
+.thank-you-state {
+  place-items: center;
+  text-align: center;
+}
+
+.result {
+  background: var(--very-dark-blue);
+  color: var(--primary-orange);
+  padding: 0.215rem 1rem;
+  border-radius: 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Hover effects */
+
+.rating_label:hover {
+  background: var(--light-grey);
+  color: var(--white);
+}
+
+input:checked + label {
+  background-color: var(--primary-orange);
+  color: var(--white);
+}
+
+button:hover {
+  background: var(--white);
+  color: var(--primary-orange);
+}
+
